@@ -4,7 +4,7 @@
 
 Bug:- No bugs till.
 
-live demo:http://aruncoolpage.c1.biz/PluginDemo/Table-Editable/
+live demo:http://arunbharath.c1.biz/PluginDemo/Table-Editable/
 
 plugin author: M.Arun Bharath s/o A.Mathiyazhalagan
 
