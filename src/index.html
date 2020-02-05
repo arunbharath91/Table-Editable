@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <!--<![endif]-->
+   <head>
+      <title>Table-editable</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height" />
+      <meta name="description" content="Table-editable by Arun Bharath" />
+      <meta name="keywords" content= "Table-editable by arun bharath" />
+      <meta name="author" content="Arun Bharath">
+      <link rel="shortcut icon" href="../../images/favicon.ico" />
+      <meta charset="UTF-8">
+      <!-- CSS Bootstrap & Custom -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <style>
+         [data-edit-input]:hover{ cursor:pointer}
+         td{width:25%; position:relative;}
+         .disabled{cursor:not-allowed;}
+         .dataedit::before{
+         content:'';
+         position: fixed;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         z-index: 1;
+         pointer-events: auto;
+         -webkit-tap-highlight-color: transparent;
+         background: rgba(0,0,0,.288);
+         -webkit-transition: background 1s ease-in;
+         -ms-transition: background 1s ease-in;
+         transition: background 1s ease-in;
+         }
+         .dataedit input{position:absolute;z-index:2;    top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;}
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Form Editable</h1>
+         <form data-edit-form>
+            <table class="table table-responsive table-bordered">
+               <thead>
+                  <tr>
+                     <td>name</td>
+                     <td>age</td>
+                     <td>designation</td>
+                     <td>message</td>
+                  <tr>
+               </thead>
+               <tbody>
+                  <tr data-row>
+                     <td data-edit-input="input[name]">Arun</td>
+                     <td data-edit-input="input[age]">7</td>
+                     <td data-edit-input="input[designation]">ui developer</td>
+                     <td class="disabled">hi this is arun</td>
+                  </tr>
+                  <tr data-row>
+                     <td data-edit-input="input[name]">Vijay</td>
+                     <td data-edit-input="input[age]">27</td>
+                     <td data-edit-input="input[designation]">ui developer</td>
+                     <td class="disabled">hi this is Vijay</td>
+                  </tr>
+                  <tr data-row>
+                     <td data-edit-input="input[name]">Anitha</td>
+                     <td data-edit-input="input[age]">26</td>
+                     <td data-edit-input="input[designation]">ui designer</td>
+                     <td class="disabled">hi this is Anitha</td>
+                  </tr>
+               </tbody>
+            </table>
+            <button type="button" data-update="https://www.mocky.io/v2/5185415ba171ea3a00704eed" class="btn btn-primary">Update</button>
+         </form>
+         <hr/>
+      </div>
+        <script src="table.js"></script>
+   </body>
+</html>
