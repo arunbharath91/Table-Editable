@@ -20,7 +20,7 @@ const formButton = (elem: HTMLElement) => {
   if (apiUrl) {
     button.setAttribute('disabled', 'true');
     fetch(apiUrl, {
-      mode: 'cors',
+      mode: 'no-cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
