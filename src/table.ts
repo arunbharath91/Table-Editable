@@ -30,9 +30,9 @@ const formButton = (elem: HTMLElement) => {
       console.log(res);
     }).catch((err) => {
       console.log(err);
-      button.setAttribute('disabled', 'false');
+      button.removeAttribute('disabled');
     }).finally(() => {
-      button.setAttribute('disabled', 'false');
+      button.removeAttribute('disabled');
     });
   } else {
     throw new Error('Provide data update value');
