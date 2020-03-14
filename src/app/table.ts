@@ -1,5 +1,5 @@
 
-const formButton = (elem: HTMLElement) => {
+export const formButton = (elem: HTMLElement) => {
   /*this function is for button click to send ajax-data*/
   const inputRow = elem.querySelectorAll('tr[data-row]');
   const inputRowArray = Array.prototype.slice.call(inputRow);
@@ -41,7 +41,7 @@ const formButton = (elem: HTMLElement) => {
 
 }
 
-class FormEdit {
+export class FormEdit {
   private target: HTMLElement;
   constructor(e: any) {
     this.target = e.target;
@@ -63,15 +63,3 @@ class FormEdit {
   }
 
 };
-
-/*this function is for form data-edit-input selector*/
-const form = document.querySelectorAll('form[data-edit-form]');
-const formArray = Array.prototype.slice.call(form);
-formArray.forEach((item) => {
-  item.addEventListener('click', (e: any) => {
-    new FormEdit(e);
-  });
-  item.querySelector('button').addEventListener('click', () => {
-    formButton(item)
-  });
-});

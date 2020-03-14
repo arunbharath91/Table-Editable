@@ -1,2 +1,2 @@
 import '../style.scss';
-import "./table";
+import "./table-config";
