@@ -13,19 +13,37 @@
       <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
       <!-- CSS Bootstrap & Custom -->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
-
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
    </head>
    <body>
+      <pre>
+         <code>
+         configuration :
+         1) Supports mutiple instance
+         2) For Configuration Ref table.config.ts 
+         const form = document.querySelector('form[data-edit-form]') as HTMLElement;
+
+         form.addEventListener('click', (e: any) => {
+           new FormEdit(e);
+         });
+       
+         (document.querySelector('#formButton') as HTMLElement).addEventListener('click', () => {
+           formButton(form);
+         });
+         3) Inbuilt http support using fetch api where data-update attribute is used for url reference.
+         </code>
+         </pre>
       <div class="container">
          <h1>Form Editable</h1>
          <form data-edit-form>
-            <table class="table table-responsive table-bordered">
-               <thead>
+            <table class="table table-bordered w-100">
+               <thead class="thead-dark">
                   <tr>
-                     <td>name</td>
-                     <td>age</td>
-                     <td>designation</td>
-                     <td>message</td>
+                     <th>name</th>
+                     <th>age</th>
+                     <th>designation</th>
+                     <th>message</th>
                   <tr>
                </thead>
                <tbody>
